@@ -35,7 +35,7 @@ function promptEmployee() {
             type: "checkbox",
             name: "role",
             message: "Employee Role: ",
-            choices: ["manager", "engineer", "intern"]
+            choices: ["Manager", "Engineer", "Intern"]
         },
     ])
 }
@@ -98,7 +98,7 @@ async function continueOptions() {
                     throw error
                 }
                 else {
-                    console.log("Team page has been created")
+                    console.log("Team page has been created in output folder")
                 }
             })
         }
