@@ -98,7 +98,7 @@ async function continueOptions() {
                     throw error
                 }
                 else {
-                    console.log("Team page has been created in output folder")
+                    console.log("Team page has been created and is available in output folder")
                 }
             })
         }
@@ -114,13 +114,13 @@ async function continueOptions() {
 async function employeeProfile() {
     try {
         const employee = await promptEmployee()
-        if (employee.role == "manager") {
+        if (employee.role == "Manager") {
             const manager = await promptManager()
             employee.name = new Manager(employee.name, employee.ID, employee.email, manager.officeNumber)
             employeeList.push(employee.name)
             continueOptions()
         }
-        else if (employee.role == "engineer") {
+        else if (employee.role == "Engineer") {
             const engineer = await promptEngineer()
             employee.name = new Engineer(employee.name, employee.ID, employee.email, engineer.github)
             employeeList.push(employee.name)
